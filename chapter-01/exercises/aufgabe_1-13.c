@@ -5,7 +5,8 @@
 int main(){
 
 	int c, nl, nw, nc, state;
-	int len_per_word[MAXLEN];
+	int word_per_len[MAXLEN];
+	int len = 0;
 	state = OUT;
 	nl = nw = nc = 0;
 
@@ -13,11 +14,19 @@ int main(){
 		++nc;
 		if (c == '\n')
 			++nl;
-		if (c == ' ' || c == '\n' || c == '\t')
-			state = OUT;
+		if (c == ' ' || c == '\n' || c == '\t'){
+		state = OUT;
+		++word_per_len[len];
+		len = 0;
+		}
+
 		else if (state == OUT){
 			state = IN;
+			++len;
 			++nw;
+		}else if (state == IN){
+			++len;
+			
 		}
 	
 	}
