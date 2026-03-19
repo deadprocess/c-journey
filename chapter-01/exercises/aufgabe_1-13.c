@@ -5,7 +5,7 @@
 int main(){
 
 	int c, nl, nw, nc, state;
-	int word_per_len[MAXLEN];
+	int word_per_len[MAXLEN] = {0};
 	int len = 0;
 	state = OUT;
 	nl = nw = nc = 0;
@@ -30,6 +30,19 @@ int main(){
 		}
 	
 	}
+	if (state == IN){
+		++word_per_len[len];
+	}
 	printf("%d %d %d\n", nl, nw, nc);
+	for (int i = 0; i <= MAXLEN; ++i){
+		printf("Laenge %d: ", i);
+		for (int j = 0; j < word_per_len[i]; j++){
+			printf("*");
+			
+			}
+		printf("\n");	
+		
+		}
+	
 
 }
