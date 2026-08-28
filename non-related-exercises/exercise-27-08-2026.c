@@ -2,7 +2,7 @@
 
 int main (void) {
 	int all_tickets = 84;
-	int closed_tickets =57;
+	int closed_tickets = 57;
 	
 	
 	int open_tickets = all_tickets - closed_tickets;
