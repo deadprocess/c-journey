@@ -11,7 +11,7 @@ int main (void) {
         printf("Wrong input!\n");
         return 1;
 
-    }else
+    }
     printf("Closed tickets: ");
     if (scanf("%d", &closed_tickets) != 1) {
         printf("Wrong input!\n");
@@ -30,21 +30,11 @@ int main (void) {
 
 
     }
-    if (closed_tickets == open_tickets) {
-        printf("There are an equal amount of closed and open tickets.\n");
-
-
-    }
-    if (open_tickets > closed_tickets) {
+    else if (open_tickets > closed_tickets) {
         printf("There are more open tickets than closed.\n");
 
-    }
+    }else { printf("There are an equal amount of closed and open tickets.\n"); } 
 
 
-	return 0;
-
-
-
-
-
+    return 0;
 }
