@@ -1,7 +1,15 @@
 #include<stdio.h>
 
 int main (void) {
+    int all_tickets;
+    int closed_tickets;
+    int open_tickets;
+    while (all_tickets != 0) {
 
+
+
+
+    }
     return 0;
 
 
