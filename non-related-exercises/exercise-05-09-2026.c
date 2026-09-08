@@ -16,7 +16,13 @@ int main(void) {
     }
     
     while(all_ticket != 0) {
+        
+        if (scanf("%d", &closed_tickets) != 1) {
+            printf("wrong input!");
+            return 1;
 
+        }
+        open_tickets = all_tickets - closed_tickets
 
 
 
