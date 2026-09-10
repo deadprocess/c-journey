@@ -25,7 +25,7 @@ int main(void) {
         }
         for (int i =0; i<= 9; i++) {
             record[i] = all_tickets;
-
+	        sum = record[i];
 
         }
         open_tickets = all_tickets - closed_tickets;
@@ -38,7 +38,15 @@ int main(void) {
             printf("wrong input!");
             return 1;
         } 
+        if (all_tickets == 0 && sum != 0) {
+            for (int o = 0; o <= sum; o++) {
+                printf("Round: %d\n", record[o]);
 
+            }
+
+
+
+        }
 
     }
 
