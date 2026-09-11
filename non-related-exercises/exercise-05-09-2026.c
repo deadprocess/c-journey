@@ -27,39 +27,23 @@ int main(void) {
             record[i] = all_tickets;
 	        sum = record[i];
 
-        }
-        open_tickets = all_tickets - closed_tickets;
-        printf("all tickets: %d\n", all_tickets);
-        printf("closed tickets: %d\n", closed_tickets);
-        printf("open tickets: %d\n", open_tickets);
         
-        printf("All_tickets: (0 to exit): ");
-        if (scanf("%d", &all_tickets) != 1) {
-            printf("wrong input!");
-            return 1;
-        } 
-        if (all_tickets == 0 && sum != 0) {
-            for (int o = 0; o <= sum; o++) {
-                printf("Round: %d\n", record[o]);
-
+            open_tickets = all_tickets - closed_tickets;
+            printf("all tickets: %d\n", all_tickets);
+            printf("closed tickets: %d\n", closed_tickets);
+            printf("open tickets: %d\n", open_tickets);
+        
+            printf("All_tickets: (0 to exit): ");
+            if (scanf("%d", &all_tickets) != 1) {
+                printf("wrong input!");
+                return 1;
+            } 
+            if (all_tickets == 0 && sum != 0) {
+                for (int o = 0; o <= sum; o++) {
+                    printf("%d Round: %d\n", record[i], record[o]);
+                }
             }
 
-
-
-        }
-
+        } 
     }
-
-    
-
-
-
-
-
-
-
-
-
-
-
 }
