@@ -16,14 +16,12 @@ int main(void) {
     }
     
     while(all_tickets != 0) {
-        
-        printf("Closed tickets: ");
-        if (scanf("%d", &closed_tickets) != 1) {
-            printf("wrong input!");
-            return 1;
-
-        }
-        for (int i =0; i<= 9; i++) {
+        for (int i = 0; i <= sum; i++){    
+            printf("Closed tickets: ");
+            if (scanf("%d", &closed_tickets) != 1) {
+                printf("wrong input!");
+                return 1;
+            }
             record[i] = all_tickets;
 	        sum = record[i];
 
@@ -39,8 +37,8 @@ int main(void) {
                 return 1;
             } 
             if (all_tickets == 0 && sum != 0) {
-                for (int o = 0; o <= sum; o++) {
-                    printf("%d Round: %d\n", record[i], record[o]);
+                for (int x = 0; x <= record[MAX_ENTRY]; x++) {
+                    printf("%d Round: %d\n", record[x]);
                 }
             }
 
