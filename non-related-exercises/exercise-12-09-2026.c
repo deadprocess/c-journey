@@ -24,7 +24,7 @@ int main(void) {
         }
         open_tickets = all_tickets - closed_tickets;
         if (sum >= MAX_ENTRIES) {
-            printf(" Warning: Entry won't be saved.");
+            printf(" Warning: Entry won't be saved.\n");
 
         }else{
             record[sum] = open_tickets;
@@ -40,7 +40,7 @@ int main(void) {
         }
 
         if (open_tickets > closed_tickets) {
-            printf("There are more open tickets than closed");
+            printf("There are more open tickets than closed.\n");
         }
         printf("All Tickets: (0 to exit): ");
         if (scanf("%d", &all_tickets) != 1) {
@@ -49,13 +49,12 @@ int main(void) {
         }
 
     }
-    if (all_tickets == 0 && sum != 0) {
-        printf("Entries of open tickets (newest record first)\n");
-            for (i = sum - 1; i >= record[sum]; i--) {
-            printf("Round %d: %d open\n", i + 1, record[i]);
-            
-        }
+    
+    for (i = sum - 1; i >= 0; i--) {
+        printf("Records of open tickets (newest record first): ");
+        printf("Round %d: %d open\n", i + 1, record[i]);    
     }
+    
 
 
     return 0;
