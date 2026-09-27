@@ -25,8 +25,13 @@ int sum = 0;
 
     }
     while (all_tickets != 0) {
-
-
+    
+        printf("Closed tickets: ");
+        if (scanf("%d", &closed_tickets) != 1) {
+            printf("Wrong format.\n");
+            return 1;
+        } 
+        
 
     }
 
