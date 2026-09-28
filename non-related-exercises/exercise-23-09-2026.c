@@ -40,3 +40,22 @@ int sum = 0;
 
     return 0;
 }
+
+int calculate_open(int all, int closed) {
+    int open = all - closed;
+    return open;    
+
+}
+void print_statistics(int all, int closed, int open) {
+    
+    printf("all tickets: %d\n", all);
+    printf("closed tickets: %d\n", closed);
+    printf("open tickets: %d\n", open);
+
+    if (closed > open) {
+        printf("There are more closed tickets than open.\n");
+    }
+    if (open > closed) {
+        printf("There are more open tickets than closed.\n");
+    }
+}
