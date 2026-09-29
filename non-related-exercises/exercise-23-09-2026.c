@@ -31,7 +31,7 @@ int sum = 0;
             printf("Wrong format.\n");
             return 1;
         } 
-        
+        int open_tickets = calculate_open(all_tickets, closed_tickets);   
 
     }
 
@@ -58,4 +58,10 @@ void print_statistics(int all, int closed, int open) {
     if (open > closed) {
         printf("There are more open tickets than closed.\n");
     }
+}
+
+void print_records(int entry[], int ticket_sum) {
+
+
+
 }
