@@ -32,7 +32,9 @@ int sum = 0;
             return 1;
         } 
         int open_tickets = calculate_open(all_tickets, closed_tickets);   
-
+        print_statistics(all_tickets, closed_tickets, open_tickets);
+        //couting mechanic
+        //print_records();
     }
 
 
