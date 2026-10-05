@@ -32,11 +32,19 @@ int sum = 0;
             return 1;
         } 
         int open_tickets = calculate_open(all_tickets, closed_tickets);   
-        print_statistics(all_tickets, closed_tickets, open_tickets);
-        //couting mechanic
-        //print_records();
-    }
+        if (sum >= MAX_ENTRIES) {
+            printf("Warning: overflow of entries. Entry won't be saved!");
+            return 1;
 
+        }
+        records[sum] = open_tickets;
+        sum++;
+        print_statistics(all_tickets, closed_tickets, open_tickets);
+        
+
+       
+    }
+    //print_records();
 
 
 
@@ -63,7 +71,7 @@ void print_statistics(int all, int closed, int open) {
 }
 
 void print_records(int entry[], int ticket_sum) {
-
+    
 
 
 }
