@@ -72,6 +72,6 @@ void print_statistics(int all, int closed, int open) {
 
 void print_records(int entry[], int ticket_sum) {
     
-
+    printf("main: sizeof(records) = ");
 
 }
