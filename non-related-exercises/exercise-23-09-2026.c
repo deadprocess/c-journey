@@ -31,9 +31,9 @@ int sum = 0;
             printf("Wrong format.\n");
             return 1;
         } 
-        int open_tickets = calculate_open(all_tickets, closed_tickets);   
+        open_tickets = calculate_open(all_tickets, closed_tickets);   
         if (sum >= MAX_ENTRIES) {
-            printf("Warning: overflow of entries. Entry won't be saved!");
+            printf("Warning: overflow of entries. Entry won't be saved!.\n");
             return 1;
 
         }
@@ -41,7 +41,11 @@ int sum = 0;
         sum++;
         print_statistics(all_tickets, closed_tickets, open_tickets);
         
-
+        printf("All tickets (0 to exit): ");
+        if (scanf("%d", &all_tickets) != 1) {
+            printf("Wrong format.\n");
+            return 1;
+        }
        
     }
     //print_records();
@@ -72,6 +76,6 @@ void print_statistics(int all, int closed, int open) {
 
 void print_records(int entry[], int ticket_sum) {
     
-    printf("main: sizeof(records) = ");
+   
 
 }
