@@ -76,6 +76,6 @@ void print_statistics(int all, int closed, int open) {
 
 void print_records(int entry[], int ticket_sum) {
     
-   
+    printf("Displaying records (newest first)");  
 
 }
