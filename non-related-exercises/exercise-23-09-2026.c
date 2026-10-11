@@ -78,7 +78,7 @@ void print_records(int entry[], int ticket_sum) {
     
     printf("Displaying records (newest first)\n");  
     
-    for (int i = ticket_sum; i >= 0; i--) {
+    for (int i = ticket_sum - 1; i >= 0; i--) {
         printf("Record %d: %d open\n", i + 1, entry[i]);
     }
 }
