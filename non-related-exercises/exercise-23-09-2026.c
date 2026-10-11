@@ -48,7 +48,7 @@ int sum = 0;
         }
        
     }
-    //print_records();
+    print_records(records[], sum);
 
 
 
@@ -77,5 +77,8 @@ void print_statistics(int all, int closed, int open) {
 void print_records(int entry[], int ticket_sum) {
     
     printf("Displaying records (newest first)");  
-
+    
+    for (int i = MAX_ENTRIES; i >= 0; i--) {
+        printf("Record %d: %d open", i + 1, entry[ticket_sum]);
+    }
 }
