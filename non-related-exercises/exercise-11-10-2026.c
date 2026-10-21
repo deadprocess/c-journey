@@ -21,7 +21,13 @@ int record[MAX_ENTRIES];
     }
 
     while (all_tickets != 0) {
-
+        
+        printf("Closed tickets: ");
+        if (scanf("%d", &closed_tickets) != 1) {
+            printf("Wrong format.\n");
+            return 1;
+        }
+       
 
     }
 
@@ -40,5 +46,12 @@ void print_statistics(int all, int closed, int open) {
     if (closed > open) {
         printf("There are more closed tickets than open.");
     }
+
+}
+void print_records(int entry[], int ticket_count) {
+
+
+}
+void save_record(int entry[], int index, int open) {
 
 }
