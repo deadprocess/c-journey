@@ -27,7 +27,8 @@ int record[MAX_ENTRIES];
             printf("Wrong format.\n");
             return 1;
         }
-       
+        open_tickets = all_tickets - closed_tickets;
+        save_record(record, ticket_count, open_tickets);
 
     }
 
@@ -53,5 +54,8 @@ void print_records(int entry[], int ticket_count) {
 
 }
 void save_record(int entry[], int index, int open) {
+
+    entry[index] = open;
+    index++;
 
 }
