@@ -29,7 +29,7 @@ int record[MAX_ENTRIES];
         }
         open_tickets = all_tickets - closed_tickets;
         save_record(record, ticket_count, open_tickets);
-
+        print_statistics(all_tickets, closed_tickets, open_tickets);
     }
 
     return 0;
@@ -37,15 +37,15 @@ int record[MAX_ENTRIES];
 
 void print_statistics(int all, int closed, int open) {
 
-    printf("All tickets: %d", all);
-    printf("Closed tickets: %d", closed);
-    printf("Open tickets: %d", open);
+    printf("All tickets: %d\n", all);
+    printf("Closed tickets: %d\n", closed);
+    printf("Open tickets: %d\n", open);
 
     if (open > closed) {
-        printf("There are more open tickets than closed.");
+        printf("There are more open tickets than closed.\n");
     }
     if (closed > open) {
-        printf("There are more closed tickets than open.");
+        printf("There are more closed tickets than open.\n");
     }
 
 }
